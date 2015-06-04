@@ -1,0 +1,431 @@
+/* line 3, ../sass/partials/_base.scss */
+body {
+  text-align: center;
+  color: #444;
+  overflow: hidden;
+  font-family: 'Slabo 27px', serif;
+}
+
+/* line 10, ../sass/partials/_base.scss */
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* line 17, ../sass/partials/_base.scss */
+.container .rotator {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  transform-origin: center 400px 0;
+  transition: all 0.3s ease-in-out;
+}
+/* line 24, ../sass/partials/_base.scss */
+.container .rotator .album {
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 200px;
+  transform-origin: center 200% 0;
+  transition: background 1s ease-out;
+}
+/* line 33, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(1) {
+  transform: rotate(0deg) scale(1);
+  background: skyblue;
+}
+/* line 37, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(2) {
+  transform: rotate(20deg) scale(1);
+  background: yellow;
+  z-index: 1;
+}
+/* line 42, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(3) {
+  transform: rotate(40deg) scale(1);
+  background: #66c366;
+}
+/* line 46, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(4) {
+  transform: rotate(60deg) scale(1);
+  background: skyblue;
+}
+/* line 50, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(5) {
+  transform: rotate(80deg) scale(1);
+  background: yellow;
+}
+/* line 54, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(6) {
+  transform: rotate(100deg) scale(1);
+  background: #66c366;
+}
+/* line 58, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(7) {
+  transform: rotate(120deg) scale(1);
+  background: skyblue;
+}
+/* line 62, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(8) {
+  transform: rotate(140deg) scale(1);
+  background: yellow;
+}
+/* line 66, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(9) {
+  transform: rotate(160deg) scale(1);
+  background: #66c366;
+}
+/* line 70, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(10) {
+  transform: rotate(180deg) scale(1);
+  background: skyblue;
+}
+/* line 74, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(11) {
+  transform: rotate(200deg) scale(1);
+  background: yellow;
+}
+/* line 78, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(12) {
+  transform: rotate(220deg) scale(1);
+  background: #66c366;
+}
+/* line 82, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(13) {
+  transform: rotate(240deg) scale(1);
+  background: skyblue;
+}
+/* line 86, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(14) {
+  transform: rotate(260deg) scale(1);
+  background: yellow;
+}
+/* line 90, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(15) {
+  transform: rotate(280deg) scale(1);
+  background: #66c366;
+}
+/* line 94, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(16) {
+  transform: rotate(300deg) scale(1);
+  background: skyblue;
+}
+/* line 98, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(17) {
+  transform: rotate(320deg) scale(1);
+  background: yellow;
+}
+/* line 102, ../sass/partials/_base.scss */
+.container .rotator .album:nth-child(18) {
+  transform: rotate(340deg) scale(1);
+  background: #66c366;
+  z-index: 1;
+}
+/* line 108, ../sass/partials/_base.scss */
+.container .rotator .album.selected {
+  background: #ff4e00;
+  z-index: 2;
+  box-shadow: 0 3px 3px 0 rgba(1, 1, 1, 0.5);
+}
+/* line 113, ../sass/partials/_base.scss */
+.container .rotator .album.selected:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 5px 3px rgba(1, 1, 1, 0.5);
+}
+/* line 119, ../sass/partials/_base.scss */
+.container .controlPanelContainer {
+  position: absolute;
+  z-index: 5;
+  box-sizing: border-box;
+  top: 70vh;
+  height: 30vh;
+  width: 100%;
+  padding-top: 20px;
+  background: url(../../img/shadow.png) no-repeat top center;
+  background-size: 80% 20px;
+}
+/* line 130, ../sass/partials/_base.scss */
+.container .controlPanelContainer .controlPanel {
+  background: white;
+  height: 100%;
+  padding: 40px;
+}
+
+/* line 3, ../sass/partials/_buttons.scss */
+button {
+  position: relative;
+  display: inline-block;
+  margin: 0 1em;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: skyblue;
+}
+/* line 11, ../sass/partials/_buttons.scss */
+button:hover {
+  color: #4981e6;
+}
+/* line 14, ../sass/partials/_buttons.scss */
+button:focus {
+  outline: 0;
+}
+
+/* line 3, ../sass/partials/_clickEffect.scss */
+button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background: rgba(111, 148, 182, 0.2);
+  pointer-events: none;
+  transform-origin: center center;
+  opacity: 0;
+}
+
+/* line 22, ../sass/partials/_clickEffect.scss */
+.button-effect-boris.button-clicked::after {
+  animation: anim-effect-boris 0.5s forwards;
+}
+
+@keyframes anim-effect-boris {
+  /* line 26, ../sass/partials/_clickEffect.scss */
+  0% {
+    transform: translateX(-50%) translateY(-50%) scale(0.3, 0.3);
+  }
+
+  /* line 30, ../sass/partials/_clickEffect.scss */
+  25%, 70% {
+    opacity: 1;
+  }
+
+  /* line 34, ../sass/partials/_clickEffect.scss */
+  100% {
+    transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/* line 41, ../sass/partials/_clickEffect.scss */
+.button-effect-radomir.button-clicked::after {
+  animation: anim-effect-radomir 0.5s forwards;
+}
+
+@-webkit-keyframes anim-effect-radomir {
+  /* line 45, ../sass/partials/_clickEffect.scss */
+  0% {
+    transform: translateX(-50%) translateY(-50%) scale(0.3, 0.3);
+    opacity: 1;
+  }
+
+  /* line 49, ../sass/partials/_clickEffect.scss */
+  30% {
+    box-shadow: inset 0 0 0 100px rgba(111, 148, 182, 0.8);
+  }
+
+  /* line 52, ../sass/partials/_clickEffect.scss */
+  80% {
+    box-shadow: inset 0 0 0 1px rgba(111, 148, 182, 0.8);
+    opacity: 0.2;
+  }
+
+  /* line 56, ../sass/partials/_clickEffect.scss */
+  100% {
+    transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/* line 63, ../sass/partials/_clickEffect.scss */
+.button-effect-sanja.button-clicked::after {
+  animation: anim-effect-sanja 1s forwards;
+}
+
+@keyframes anim-effect-sanja {
+  /* line 67, ../sass/partials/_clickEffect.scss */
+  0% {
+    transform: translateX(-50%) translateY(-50%) scale(0.3, 0.3);
+  }
+
+  /* line 71, ../sass/partials/_clickEffect.scss */
+  50% {
+    transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    opacity: 1;
+  }
+
+  /* line 76, ../sass/partials/_clickEffect.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 82, ../sass/partials/_clickEffect.scss */
+.button-effect-ilinka.button-clicked::after {
+  animation: anim-effect-ilinka 0.5s forwards;
+}
+
+@keyframes anim-effect-ilinka {
+  /* line 89, ../sass/partials/_clickEffect.scss */
+  20% {
+    opacity: 1;
+  }
+
+  /* line 93, ../sass/partials/_clickEffect.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 99, ../sass/partials/_clickEffect.scss */
+.button-effect-nikola.button-clicked::after {
+  animation: anim-effect-nikola 0.5s forwards;
+}
+
+@keyframes anim-effect-nikola {
+  /* line 103, ../sass/partials/_clickEffect.scss */
+  0% {
+    transform: translateX(-50%) translateY(-50%) scale(0.3, 0.3);
+  }
+
+  /* line 107, ../sass/partials/_clickEffect.scss */
+  50% {
+    transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    opacity: 1;
+  }
+
+  /* line 112, ../sass/partials/_clickEffect.scss */
+  100% {
+    transform: translateX(-50%) translateY(-50%) scale(0.3, 0.3);
+    opacity: 0;
+  }
+}
+
+/* line 119, ../sass/partials/_clickEffect.scss */
+.button-effect-tamara.button-clicked::after {
+  animation: anim-effect-tamara 0.3s forwards;
+}
+
+@keyframes anim-effect-tamara {
+  /* line 123, ../sass/partials/_clickEffect.scss */
+  0% {
+    transform: translateX(-50%) translateY(-50%) scale(0.7, 0.7);
+    box-shadow: 0 0 0 25px rgba(111, 148, 182, 0.8);
+  }
+
+  /* line 128, ../sass/partials/_clickEffect.scss */
+  10% {
+    opacity: 0.4;
+  }
+
+  /* line 132, ../sass/partials/_clickEffect.scss */
+  100% {
+    transform: translateX(-50%) translateY(-50%) scale(0.8, 0.8);
+    box-shadow: 0 0 10px 100px rgba(111, 148, 182, 0.8);
+    opacity: 0;
+  }
+}
+
+/* line 140, ../sass/partials/_clickEffect.scss */
+.button-effect-marko.button-clicked::after {
+  animation: anim-effect-marko 0.5s forwards;
+}
+
+@keyframes anim-effect-marko {
+  /* line 144, ../sass/partials/_clickEffect.scss */
+  0% {
+    box-shadow: inset 0 0 0 0px rgba(111, 148, 182, 0.8);
+    opacity: 0.5;
+  }
+
+  /* line 148, ../sass/partials/_clickEffect.scss */
+  90% {
+    box-shadow: inset 0 0 0 50px rgba(111, 148, 182, 0.8);
+  }
+
+  /* line 151, ../sass/partials/_clickEffect.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 158, ../sass/partials/_clickEffect.scss */
+button.button-effect-milan::before,
+button.button-effect-milan::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  pointer-events: none;
+  transform-origin: center center;
+  opacity: 0;
+  background: transparent;
+  border: 4px solid rgba(111, 148, 182, 0.3);
+}
+
+/* line 176, ../sass/partials/_clickEffect.scss */
+.button-effect-milan.button-clicked::before {
+  animation-name: anim-effect-milan-fade, anim-effect-milan-rotate1;
+  animation-duration: 4.5s, 1s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: ease, linear;
+}
+
+/* line 182, ../sass/partials/_clickEffect.scss */
+.button-effect-milan.button-clicked::after {
+  animation-name: anim-effect-milan-fade, anim-effect-milan-rotate2;
+  animation-duration: 4.5s, 1s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: ease, linear;
+}
+
+/* line 189, ../sass/partials/_clickEffect.scss */
+.button-effect-milan.button-clicked::before,
+.button-effect-milan.button-clicked::after {
+  animation-fill-mode: forwards;
+}
+
+@keyframes anim-effect-milan-rotate1 {
+  /* line 194, ../sass/partials/_clickEffect.scss */
+  0% {
+    transform: translateX(-50%) translateY(-50%) perspective(1000px) rotate3d(1, 1, 1, 0deg);
+  }
+
+  /* line 197, ../sass/partials/_clickEffect.scss */
+  100% {
+    transform: translateX(-50%) translateY(-50%) perspective(1000px) rotate3d(1, 1, 1, 360deg);
+  }
+}
+
+@keyframes anim-effect-milan-rotate2 {
+  /* line 202, ../sass/partials/_clickEffect.scss */
+  0% {
+    transform: translateX(-50%) translateY(-50%) perspective(1000px) rotate3d(1, -1, 1, 0deg);
+  }
+
+  /* line 205, ../sass/partials/_clickEffect.scss */
+  100% {
+    transform: translateX(-50%) translateY(-50%) perspective(1000px) rotate3d(1, -1, 1, 360deg);
+  }
+}
+
+@keyframes anim-effect-milan-fade {
+  /* line 210, ../sass/partials/_clickEffect.scss */
+  20%, 80% {
+    opacity: 1;
+  }
+
+  /* line 213, ../sass/partials/_clickEffect.scss */
+  100% {
+    opacity: 0;
+  }
+}

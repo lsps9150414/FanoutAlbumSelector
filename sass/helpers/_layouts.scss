@@ -1,0 +1,4 @@
+@mixin album-transform($nth) {
+  $rotate-deg: $nth * 20 - 20;
+  transform: rotate(#{$rotate-deg}deg) scale(1); 
+}

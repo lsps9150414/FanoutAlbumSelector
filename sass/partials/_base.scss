@@ -1,0 +1,145 @@
+@import 'helpers/all';
+
+body {
+  text-align: center;
+  color: #444;
+  overflow: hidden;
+  font-family: 'Slabo 27px', serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.container {
+  .rotator {
+    position: relative;
+    top: 20vh;
+    margin: auto;
+    transform-origin: center 400px 0;
+    transition: all 0.3s ease-in-out;
+
+    .album {
+      position: absolute;
+      left: 50%;
+      margin-left: -150px;
+      width: 300px;
+      height: 200px;
+      transform-origin: center 200% 0;
+      transition: background 1s ease-out;
+
+      &:nth-child(1) {
+        @include album-transform(1);
+        background: skyblue;
+      }
+      &:nth-child(2) {
+        @include album-transform(2);
+        background: yellow;
+        z-index: 1;
+      }
+      &:nth-child(3) {
+        @include album-transform(3);
+        background: #66c366;
+      }
+      &:nth-child(4) {
+        @include album-transform(4);
+        background: skyblue;
+      }
+      &:nth-child(5) {
+        @include album-transform(5);
+        background: yellow;
+      }
+      &:nth-child(6) {
+        @include album-transform(6);
+        background: #66c366;
+      }
+      &:nth-child(7) {
+        @include album-transform(7);
+        background: skyblue;
+      }
+      &:nth-child(8) {
+        @include album-transform(8);
+        background: yellow;
+      }
+      &:nth-child(9) {
+        @include album-transform(9);
+        background: #66c366;
+      }
+      &:nth-child(10) {
+        @include album-transform(10);
+        background: skyblue;
+      }
+      &:nth-child(11) {
+        @include album-transform(11);
+        background: yellow;
+      }
+      &:nth-child(12) {
+        @include album-transform(12);
+        background: #66c366;
+      }
+      &:nth-child(13) {
+        @include album-transform(13);
+        background: skyblue;
+      }
+      &:nth-child(14) {
+        @include album-transform(14);
+        background: yellow;
+      }
+      &:nth-child(15) {
+        @include album-transform(15);
+        background: #66c366;
+      }
+      &:nth-child(16) {
+        @include album-transform(16);
+        background: skyblue;
+      }
+      &:nth-child(17) {
+        @include album-transform(17);
+        background: yellow;
+      }
+      &:nth-child(18) {
+        @include album-transform(18);
+        background: #66c366;
+        z-index: 1;
+      }
+
+      &.selected {
+        background: #ff4e00;
+        z-index: 2;
+        box-shadow: 0 3px 3px 0 rgba(1,1,1,0.5);
+      }
+      &.selected:hover {
+        cursor: pointer;
+        box-shadow: 0 3px 5px 3px rgba(1,1,1,0.5);
+      }
+    }
+  }
+  .controlPanelContainer {
+    position: absolute;
+    z-index: 5;
+    box-sizing: border-box;
+    top: 70vh;
+    height: 30vh;
+    width: 100%;
+    padding-top: 20px;
+    background: url(../../img/shadow.png) no-repeat top center;
+    background-size: 80% 20px;
+
+    .controlPanel {
+      background: white;
+      height: 100%;
+      padding: 40px;
+
+      .rotateLeft, .rotateRight {
+      }
+      .rotateLeft {
+
+      }
+      .rotateRight {
+
+      }
+    }
+  }
+}

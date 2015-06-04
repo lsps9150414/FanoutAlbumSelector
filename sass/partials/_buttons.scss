@@ -1,0 +1,15 @@
+@import 'helpers/all';
+
+button {
+  position: relative;
+  display: inline-block;
+  margin: 0 1em;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: skyblue;
+  &:hover {
+    color: #4981e6;
+  }
+  &:focus {outline:0;}
+}
